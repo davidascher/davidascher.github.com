@@ -43,12 +43,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">Bike rides and showers</a>
+          <a class="brand whimsical" href="/">Bike rides &amp; showers</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="/about.html">About</a></li>
-              <li><a href="/contact.html">Contact</a></li>
+              <li {% if page.url == "/index.html"%} class="active" {% endif %}
+               ><a href="/">Home</a></li>
+              <li {% if page.url == "/about.html"%} class="active" {% endif %}
+               ><a href="/about.html">Why</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
