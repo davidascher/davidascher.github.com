@@ -1,0 +1,58 @@
+---
+layout: post
+title: The Action Item Bot
+summary: a bot that keeps track of the commitments you make to your teammates
+categories: [status:concept, difficulty:easy, target:teams]
+---
+<section class="content">
+
+<h2>Motivation</h2>
+
+<p>
+I don't know about you, but I find it hard to keep track of what i've promised people, and I don't like that.
+</p>
+<p>
+ At Mozilla, we tend to have IRC backchannels as part of the normal flow of project management.  We're on the phone, on vidyo, but we're also in IRC.  So what if when someone says "yeah, I'll update the blog", there are both people hearing you say that, and we have ways of keeping logs, with most teams having people who are good at taking notes.
+</p>
+<p>The idea for this bot is that we could piggyback on normal team behaviors and detect commitments via IRC interactions, and keep track of them. (This is a variation on an interaction style I first saw in <code><a href="http://teamstat.us">teamstat.us</a></code>, which you should check out).
+</p>
+
+<p>The idea here is that there would be an irc bot called "IA" (for Action Item), to whom anybody could say as soon as I mention it in the call:</p>
+
+<pre><b>somebody:</b> IA: davida: update the blog post by next tuesday
+</pre>
+<p>
+	and then the bot would say:
+</p>
+
+<pre><b>IA:</b> davida: do you commit to "update the blog post by next tuesday"?</pre>
+
+<p>to which I'd then have to say</p>
+
+<pre><b>davida:</b> IA: I do.</pre>  
+
+<p>
+	which would be ack'ed:
+</p>
+<pre><b>IA:</b> davida: your commitment list has been updated (http://actionite.ms)</pre>
+
+<p>
+	And then I could just go to <code>http://actionite.ms</code> (or some URL that actually existed), sign in (using Persona), and see what I've committed to.  When I got to that blog post, I could presumably check off "that's done" on the website, and the bot would tell the people in the IRC chatroom where I'd committed to the work.
+</p>
+
+<p>
+	Furthermore, there'd likely be a page on the site (e.g. <code>actionite.ms/<em>&lt;server&gt;</em>/<em>&lt;room&gt;</em></code>) tracking the outstanding and recently-done commitments that occured in that chatroom.
+</p>
+
+<h2>Implementation notes</h2>
+<ul>
+	<li>As lloyd mentioned in irc, the tricky bit is to figure out auth -- how does the bot know who on IRC has what Persona ID.  But that's a good problem, worth solving.</li>
+	<li>Hubot is where I'd look to play w/ an irc client these days, although working in coffeescript is a bit of a switch.</li>
+</ul>
+
+<h2>Status</h2>
+
+<p>
+	Nobody is doing anything w/ this as far as I know.
+</p>
+</section>

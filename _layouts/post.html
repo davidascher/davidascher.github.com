@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="span9">
+	{% if page.categories %}
+	<div class="labels">
+		{% for category in page.categories %}
+		<span class="label label-info">{{ category }}</span>
+		{% endfor %}
+	</div>
+	{% endif %}
+	{% if page.date %}<div class="date">Created: {{page.date | date: "%Y %b %d"}}</div>{% endif %}
+
+	<h1 class="posttitle">
+	{{ page.title }}
+	</h1>
+
+
+	{{ content }}
+</div>
