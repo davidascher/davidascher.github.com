@@ -1,0 +1,51 @@
+---
+layout: post
+title: Peer to Peer Debugging
+summary: Get your friends to help you do pair debugging, even if they're remote
+categories: [status:concept, difficulty:hard]
+published: true
+---
+<section class="content">
+
+<h2>Motivation</h2>
+
+<p>
+There are two approaches to working through a problem in programming (aka <em>debugging</em>).  The first is to drill down into a problem as far as they need to go, and as broad as they need to go, so that they understand everything.  People who follow that approach tend to do so solo, because it's critical to them to understand everything, to build the foundation of knowledge that will let them be more effective in the future, and likely for other reasons too.  I often get frustrated, bored and impatient with that approach, because to me programming is just a means to an end, which is an experience, a working mechanism, a proof of concept.  My take is much more collaborative, otherwise known as leechy -- I ask my friends for help.  That works great when I'm in a place with knowledgeable folks, but that's fairly limited.
+</p>
+
+<p>
+	What if we could do 'pair debugging' over the net?
+</p>
+
+<h2>Phase 1: TowTruck</h2>
+
+<p>The first version of this was done in a jiffy by Simon Wex.  Here he is explaining it:</p>
+
+<iframe src="http://player.vimeo.com/video/36754286" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+<p>
+	This was pretty cool, as it showed that the general idea worked as intended, and it showed that we could reuse cool tech like etherpad-lite to do multi-document editing.  It's possible that we'll find uses for this within the context of Mozilla's Learning initiatives, to support peer-based learning around the web, e.g. in classroom settings.
+</p>
+
+<h2>Phase 2: P2P</h2>
+
+<p>
+	One big weakness with TowTruck (and we knew this going in) is that it requires a central hosting point to where the collaborative editing happens.  This means that even after the problem is solved, users still have to figure out how to get their own environment to have the 'fix', and it also means that the architecture requires a central (or many central) hosting providers, which scales poorly.
+</p>
+
+<p>
+	Centralization often has real business drivers (analytics, etc.), but in this case, centralization was just the easier thing.  Is it possible to envision a way in which one developer's computer directly connects with another developer?  Firewalls make that hard in general, but there are ways to work through that, including STUN and ICE.  Luckily, browsers are gaining some of those capabilities via the work on WebRTC (real-time-communication), which needs peer to peer channels for voice, video, and data channels.  Talking to Ralph Giles, it seems that we can expect to have some builds of Firefox w/ the data-channel p2p work functional in a few months.  It'll be interesting to see if we can apply that to a collaborative editing frame.
+</p>
+
+<h2>Implementation notes</h2>
+<ul>
+	<li>Even with p2p data channel from WebRTC, we have to figure out what the right protocol is for collaborative editing.  etherpad-lite has one, about which I know nothing.</li>
+	<li>Etherpad-lite is written on node.js -- it's one of many projects which would be lovely to see run inside a browser JS runtime.</li>
+</ul>
+
+<h2>Status</h2>
+
+<p>
+	Waiting for WebRTC for now.
+</p>
+</section>
