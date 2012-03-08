@@ -1,6 +1,6 @@
 /*@import url(http://fonts.googleapis.com/css?family=Mystery+Quest);*/
 /*@import url(http://fonts.googleapis.com/css?family=Glass+Antiqua);*/
-@import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
 
 h1,
 h2,
@@ -11,6 +11,9 @@ h6 {
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
+.navbar .brand {
+	font-size: 28px !important;
+}
 .whimsical {
 	font-family: 'Amatic SC', cursive;
 	/*font-weight: normal !important;*/

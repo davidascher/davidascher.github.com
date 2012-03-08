@@ -2,30 +2,28 @@
 layout: default
 ---
 
-          <div class="row-fluid">
-			<header>
-            	<h1 class="whimsical">Bike rides &amp; showers</h1>
-        	</header>
-            <p>This site collects the random, half-baked ideas that I come up with, hopefully in such a way that others can understand them and do something useful with them.</p>
-          </div>
+<header>
+	<h1 class="whimsical">Bike rides &amp; shower thoughts</h1>
+</header>
+<p>This site is a selection of the random, half-baked ideas that I come up with, hopefully in such a way that others can understand them and do something useful with them. <a href="/about.html">read more…</a></p>
 
 
-          <div class="row-fluid">
-			{% for post in site.posts %}
-	            <div class="span4 project">
-	              <h2><a href="{{post.url}}">{{post.title}}</a></h2>
-	              <p>{{post.summary}}
-	              <p class="more"><a class="XXbtn" href="{{post.url}}">more &raquo;</a></p>
-	            </div><!--/span-->
-			  {% capture thecycle %}{% cycle '1', '2', '3' %}{% endcapture %}
-				{% if thecycle == '3' %}
-		          </div><div class="row-fluid">
-		        {% endif %}
-			{% endfor %}
-          </div>
+<div class="row">
+{% for post in site.posts %}
+    <div class="span4 project">
+      <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+      <p>{{post.summary}}
+      <p class="more"><a class="XXbtn" href="{{post.url}}">more &raquo;</a></p>
+    </div><!--/span-->
+  {% capture thecycle %}{% cycle '1', '2', '3' %}{% endcapture %}
+	{% if thecycle == '3' %}
+      </div><div class="row">
+    {% endif %}
+{% endfor %}
+</div>
 
-          <div class="spacer"/>
+<div class="spacer"/>
 
-          <div class="row-fluid signature">
-            <p class="signature">david ascher &mdash;  find me on <a class="favicon brandColor twitter" href="https://twitter.com/davidascher">twitter</a> or <a class="favicon brandColor github" href="https://github.com/davidascher">github</a></p>
-          </div>
+<div class="row signature">
+<p class="signature">david ascher &mdash;  find me on <a class="favicon brandColor twitter" href="https://twitter.com/davidascher">twitter</a> or <a class="favicon brandColor github" href="https://github.com/davidascher">github</a></p>
+</div>
