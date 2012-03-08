@@ -15,11 +15,18 @@ layout: default
 	            <div class="span4">
 	              <h2><a href="{{post.url}}">{{post.title}}</a></h2>
 	              <p>{{post.summary}}
-	              <p><a class="btn" href="{{post.url}}">View details &raquo;</a></p>
+	              <p><a class="btn" href="{{post.url}}">details &raquo;</a></p>
 	            </div><!--/span-->
 			  {% capture thecycle %}{% cycle '1', '2', '3' %}{% endcapture %}
 				{% if thecycle == '3' %}
 		          </div><div class="row-fluid">
 		        {% endif %}
 			{% endfor %}
+          </div>
+
+          <div class="spacer"/>
+
+          <div class="row-fluid">
+            <p>Curious about the <a href="/about.html">motivation</a> for this site?</p>
+            <p class="signature">-- david ascher (find me on <a class="favicon brandColor twitter" href="https://twitter.com/davidascher">twitter</a> or <a class="favicon brandColor github" href="https://github.com/davidascher">github</a>)</p>
           </div>

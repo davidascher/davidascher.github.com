@@ -29,12 +29,91 @@ h6 {
 	font-weight: normal;
 }
 
+.spacer {
+	padding-top: 1em;
+}
+.why {
+  color: white;
+  padding: 8px 20px 12px;
+  float: right;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.why:hover {
+	color: white;
+}
 header h1{
+	padding-top: .2em;
 	font-size: 60px;
 	line-height: 1.2em;
 	padding-bottom: .2em;
 }
 
+h1 {
+	padding-top: .2em;
+}
 .posttitle {
 	padding-bottom: 1em;
+}
+
+.favicon{
+	height: 16px;
+	max-width: 16px;
+	background-image:url('/assets/img/icons-sprite.png');
+	background-repeat:no-repeat;
+	background-position:left 5px;
+	padding:0px 0 3px 21px!important;
+}
+
+.rss{
+	background-position:-118px -48px;
+}
+
+.pdf{
+	background-position:-202px -130px;
+}
+
+.default{
+	background-position:-182px -109px;
+}
+
+.github{
+	background-position:-242px -170px;
+}
+
+.flickr{
+	background-position:-222px -150px;
+}
+
+.facebook{
+	background-position:-162px -90px;
+}
+
+.twitter{
+	background-position:-142px -70px;
+}
+
+.blogger{
+	background-position:-262px -190px;
+}
+
+.plus{
+	background-position:-282px -210px;
+}
+
+.tumblr{
+	background-position:-302px -230px;
+}
+
+.vimeo{
+	background-position:-322px -250px;
+}
+
+.youtube{
+	background-position:-342px -270px;
+}
+
+.addons{
+	background-position:-362px -290px;
 }

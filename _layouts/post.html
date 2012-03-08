@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="span9">
+<div class="span12">
 	{% if page.categories %}
 	<div class="labels">
 		{% for category in page.categories %}
@@ -10,6 +10,7 @@ layout: default
 		{% endfor %}
 	</div>
 	{% endif %}
+
 	{% if page.date %}<div class="date">Created: {{page.date | date: "%Y %b %d"}}</div>{% endif %}
 
 	<h1 class="posttitle">
