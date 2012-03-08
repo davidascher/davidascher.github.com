@@ -1,4 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Mystery+Quest);
+/*@import url(http://fonts.googleapis.com/css?family=Mystery+Quest);*/
+/*@import url(http://fonts.googleapis.com/css?family=Glass+Antiqua);*/
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700);
 
 h1,
 h2,
@@ -10,8 +12,9 @@ h6 {
 }
 
 .whimsical {
-	font-family: 'Mystery Quest', cursive;
-	font-weight: normal !important;
+	font-family: 'Amatic SC', cursive;
+	/*font-weight: normal !important;*/
+	font-weight: 700 !important;
 }
 
 .labels,.date {
@@ -53,9 +56,18 @@ header h1{
 h1 {
 	padding-top: .2em;
 }
+h2 {
+	line-height: 1.1em;
+	padding-bottom: .2em;
+}
 .posttitle {
 	padding-bottom: 1em;
 }
+
+.project {
+/*	border: 2px solid grey;
+	-moz-box-sizing: border-box;
+*/}
 
 .favicon{
 	height: 16px;
