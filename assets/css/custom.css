@@ -17,6 +17,9 @@ h6 {
 	font-weight: 700 !important;
 }
 
+.signature {
+	/*text-align: right;*/
+}
 .labels,.date {
 	float: right;
 	padding-bottom: 1em;
@@ -65,9 +68,14 @@ h2 {
 }
 
 .project {
+	padding-bottom: .5em;
 /*	border: 2px solid grey;
 	-moz-box-sizing: border-box;
 */}
+
+.more {
+	text-align: right;
+}
 
 .favicon{
 	height: 16px;
