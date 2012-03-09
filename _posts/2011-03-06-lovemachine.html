@@ -28,13 +28,17 @@ Public storage of something akin to a Facebook like, but authed by Persona and f
 <h2>Implementation notes</h2>
 
 <p>
-	There are obvious scaling questions if this kind of thing were to be adopted by lots of sites.
+	There are obvious scaling questions if this kind of thing were to be adopted by lots of sites.  The current code is a trivial node server backed by redis.
+</p>
+
+<p>
+	I'm finding that the links don't always respond to clicks, which could be me somehow running into clickjacking protection, or otherwise missing some basic CSS something.
 </p>
 
 <h2>Status</h2>
 
 <p>
-	I have a very very trivial implementation currently working, and powering the "Feedback" like interaction at the bottom of each of the posts on this page.  Source is available <a href="https://github.com/davidascher/lovemachine">on github</a>.
+	I have a very very trivial implementation currently working, and powering the "Feedback" interaction with the megaphone icon at the bottom of each of the posts on this page.  Source is available <a href="https://github.com/davidascher/lovemachine">on github</a>.
 </p>
 
 </section>
