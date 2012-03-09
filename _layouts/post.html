@@ -1,23 +1,22 @@
 ---
 layout: default
 ---
-	{% if page.categories %}
-	<div class="labels">
-		{% for category in page.categories %}
-		<span class="label label-info">{{ category }}</span>
-		{% endfor %}
-	</div>
-	{% endif %}
-
-	{% if page.date %}<div class="date">Created: {{page.date | date: "%Y %b %d"}}</div>{% endif %}
-
-	<h1 class="posttitle">
-	{{ page.title }}
-	</h1>
-
-<div class="row">
-  <div class="span12">
-	{{ content }}
-	  <iframe frameborder="0" scrolling="no" width=220 height=34 src="http://love.vcap.mozillalabs.com/loves?url={{site.domain}}{{page.url}}"/>
-  </div>
+{% if page.categories %}
+<div class="labels">
+	{% for category in page.categories %}
+	<span class="label label-info">{{ category }}</span>
+	{% endfor %}
 </div>
+{% endif %}
+
+{% if page.date %}<div class="date">Created: {{page.date | date: "%Y %b %d"}}</div>{% endif %}
+
+<h1 class="posttitle">
+{{ page.title }}
+</h1>
+
+{{ content }}
+
+<h2>Feedback</h2>
+
+<iframe class="loveit" frameborder="0" scrolling="no" width=220 height=34 src="http://love.vcap.mozillalabs.com/loves?url={{site.domain}}{{page.url}}"></iframe>
