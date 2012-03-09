@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PersonaLike
+title: Love Machine
 summary: a service which makes it easy for sites to delegate recording and displaying of "liking" operations
 categories: [status:concept, difficulty:hard, target:RPs]
 ---
@@ -9,7 +9,7 @@ categories: [status:concept, difficulty:hard, target:RPs]
 <h2>Motivation</h2>
 
 <p>
-Public storage of likes authed by Persona
+Public storage of something akin to a Facebook like, but authed by Persona and for public benefit.
 </p>
 
 
@@ -19,18 +19,22 @@ Public storage of likes authed by Persona
 	Disqus, Facebook Like
 </p>
 
+<h2>Design Questions</h2>
+
+<p>
+	The current version keeps track of which Persona ID declared their love for what URL.  There are lots of open questions about what to do with that data, the degree to which it should be private and if so exactly how, etc.  For now I'm taking the stance (which should be communicated to users) that this is a loud, public w00t.
+</p>
+
 <h2>Implementation notes</h2>
 
 <p>
-	A node server which manages
-<ul>
-	<li>
-	</li>
-</ul>
+	There are obvious scaling questions if this kind of thing were to be adopted by lots of sites.
+</p>
 
 <h2>Status</h2>
 
 <p>
-	Nobody is doing anything w/ this as far as I know.
+	I have a very very trivial implementation currently working, and powering the "Feedback" like interaction at the bottom of each of the posts on this page.  Source is available <a href="https://github.com/davidascher/lovemachine">on github</a>.
 </p>
+
 </section>
